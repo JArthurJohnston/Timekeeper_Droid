@@ -1,10 +1,15 @@
 package com.jarthur.timekeeper_droid;
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.jarthur.timekeeper_droid.core.DataProvider;
 
@@ -14,13 +19,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ListAdapter activitiesAdaptor = getStringArrayAdapter();
+        setupListView(activitiesAdaptor);
+    }
 
-        ListAdapter activitiesAdaptor = new ArrayAdapter<String>(
+    private ListView setupListView(ListAdapter activitiesAdaptor) {
+        ListView activityList = (ListView) findViewById(R.id.timesheetActivityList);
+        activityList.setAdapter(activitiesAdaptor);
+        activityList.setOnItemClickListener(getListClickListener());
+        return activityList;
+    }
+
+    @NonNull
+    private ArrayAdapter<String> getStringArrayAdapter() {
+        return new ArrayAdapter<String>(
                 this,
-                android.R.layout.simple_expandable_list_item_1,
+                R.layout.timesheet_activity_list_item,
+                R.id.activityItem,
                 this.activitiesList());
-        ListView activitiesList = (ListView) findViewById(R.id.timesheetActivityList);
-        activitiesList.setAdapter(activitiesAdaptor);
+    }
+
+    @NonNull
+    private AdapterView.OnItemClickListener getListClickListener() {
+        final Intent showActivityIntent = new Intent(this, ActivityRead.class);
+        return new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selected = String.valueOf(parent.getItemAtPosition(position));
+                Toast.makeText(MainActivity.this, selected, Toast.LENGTH_LONG).show();
+                startActivity(showActivityIntent);
+            }
+        };
     }
 
     private String[] activitiesList() {
