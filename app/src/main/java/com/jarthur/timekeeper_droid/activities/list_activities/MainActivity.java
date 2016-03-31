@@ -1,42 +1,24 @@
-package com.jarthur.timekeeper_droid;
+package com.jarthur.timekeeper_droid.activities.list_activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.jarthur.timekeeper_droid.core.DataProvider;
+import com.jarthur.timekeeper_droid.R;
+import com.jarthur.timekeeper_droid.activities.show_activities.ActivityRead;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ListAdapter activitiesAdaptor = getStringArrayAdapter();
-        setupListView(activitiesAdaptor);
-    }
-
-    private ListView setupListView(ListAdapter activitiesAdaptor) {
-        ListView activityList = (ListView) findViewById(R.id.timesheetActivityList);
-        activityList.setAdapter(activitiesAdaptor);
+        ListView activityList = (ListView) findViewById(R.id.timekeeperListView);
         activityList.setOnItemClickListener(getListClickListener());
-        return activityList;
-    }
 
-    @NonNull
-    private ArrayAdapter<String> getStringArrayAdapter() {
-        return new ArrayAdapter<String>(
-                this,
-                R.layout.timesheet_activity_list_item,
-                R.id.activityItem,
-                this.activitiesList());
     }
 
     @NonNull
@@ -46,13 +28,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selected = String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(MainActivity.this, selected, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, selected, Toast.LENGTH_SHORT).show();
                 startActivity(showActivityIntent);
             }
         };
     }
 
-    private String[] activitiesList() {
+    @Override
+    protected String[] listItems() {
         return new String[]{
                 "Greenwood\t61\t09:00am - 10:00am",
                 "Greenwood\tSTU\t10:00am - 10:15am",
@@ -60,4 +43,5 @@ public class MainActivity extends AppCompatActivity {
                 "Greenwood\t61\t01:00pm - 5:30pm",
         };
     }
+
 }

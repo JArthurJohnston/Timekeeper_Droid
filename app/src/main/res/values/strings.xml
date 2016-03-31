@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Timekeeper_Droid</string>
     <string name="title_activity_activity_read">ActivityRead</string>
+    <string name="title_activity_story_card_list">Story Cards</string>
+    <string name="title_activity_projects_list">Projects</string>
+    <string name="title_activity_timesheets_list">Timesheets</string>
+    <string name="title_activity_list">Activities</string>
 </resources>
