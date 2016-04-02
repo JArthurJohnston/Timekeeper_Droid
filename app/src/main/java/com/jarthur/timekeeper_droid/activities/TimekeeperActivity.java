@@ -7,7 +7,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.jarthur.timekeeper_droid.R;
-import com.jarthur.timekeeper_droid.activities.list_activities.MainActivity;
+import com.jarthur.timekeeper_droid.activities.show_activities.TimesheetShow;
 import com.jarthur.timekeeper_droid.activities.list_activities.ProjectsList;
 import com.jarthur.timekeeper_droid.activities.list_activities.StoryCardList;
 import com.jarthur.timekeeper_droid.activities.list_activities.TimesheetList;
@@ -44,7 +44,7 @@ public class TimekeeperActivity extends AppCompatActivity {
             case(R.id.timesheetsMenuItem):
                 return TimesheetList.class;
         default:
-            return MainActivity.class;
+            return TimesheetShow.class;
         }
     }
 }

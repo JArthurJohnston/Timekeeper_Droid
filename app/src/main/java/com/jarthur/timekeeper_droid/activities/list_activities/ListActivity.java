@@ -1,13 +1,8 @@
 package com.jarthur.timekeeper_droid.activities.list_activities;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -15,22 +10,21 @@ import android.widget.ListView;
 import com.jarthur.timekeeper_droid.R;
 import com.jarthur.timekeeper_droid.activities.TimekeeperActivity;
 
-public class ListActivity extends TimekeeperActivity {
+public abstract class ListActivity extends TimekeeperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayout());
+        setContentView(getContentLayout());
         setupListAdapter();
+        setListClickBehavior();
     }
 
-    protected int getLayout(){
-        return R.layout.activity_list;
+    protected int getContentLayout(){
+        return R.layout.activity_basic_list;
     }
 
-    protected String[] listItems(){
-        return new String[]{};
-    }
+    protected abstract String[] listItems();
 
 
     private void setupListAdapter() {
@@ -39,11 +33,26 @@ public class ListActivity extends TimekeeperActivity {
                 android.R.layout.simple_expandable_list_item_1,
                 this.listItems());
 
-        ListView projectsListview = (ListView)findViewById(getListViewId());
-        projectsListview.setAdapter(listAdapter);
+        getListView().setAdapter(listAdapter);
+    }
+
+    private void setListClickBehavior(){
+        getListView().setOnItemClickListener(this.getListClickListener());
+    }
+
+    protected AdapterView.OnItemClickListener getListClickListener() {
+        return new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            }
+        };
+    }
+
+    protected ListView getListView() {
+        return (ListView)findViewById(getListViewId());
     }
 
     protected int getListViewId() {
-        return R.id.timekeeperListView;
+        return R.id.basicListView;
     }
 }

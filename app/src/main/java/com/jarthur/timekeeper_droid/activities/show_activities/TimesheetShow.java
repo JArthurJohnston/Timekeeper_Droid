@@ -1,4 +1,4 @@
-package com.jarthur.timekeeper_droid.activities.list_activities;
+package com.jarthur.timekeeper_droid.activities.show_activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,26 +9,18 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.jarthur.timekeeper_droid.R;
-import com.jarthur.timekeeper_droid.activities.show_activities.ActivityRead;
+import com.jarthur.timekeeper_droid.activities.list_activities.ListActivity;
 
-public class MainActivity extends ListActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ListView activityList = (ListView) findViewById(R.id.timekeeperListView);
-        activityList.setOnItemClickListener(getListClickListener());
-
-    }
+public class TimesheetShow extends ListActivity {
 
     @NonNull
-    private AdapterView.OnItemClickListener getListClickListener() {
-        final Intent showActivityIntent = new Intent(this, ActivityRead.class);
+    protected AdapterView.OnItemClickListener getListClickListener() {
+        final Intent showActivityIntent = new Intent(this, ActivityShow.class);
         return new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selected = String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(MainActivity.this, selected, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TimesheetShow.this, selected, Toast.LENGTH_SHORT).show();
                 startActivity(showActivityIntent);
             }
         };

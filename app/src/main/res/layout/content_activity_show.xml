@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activities.show_activities.ActivityRead"
-    tools:showIn="@layout/activity_activity_read">
+    tools:context=".activities.show_activities.ActivityShow"
+    tools:showIn="@layout/activity_basic_show">
 
     <TextView
         android:layout_width="match_parent"

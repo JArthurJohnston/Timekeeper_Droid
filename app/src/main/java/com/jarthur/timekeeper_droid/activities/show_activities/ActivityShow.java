@@ -1,18 +1,17 @@
 package com.jarthur.timekeeper_droid.activities.show_activities;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.jarthur.timekeeper_droid.R;
 import com.jarthur.timekeeper_droid.activities.TimekeeperActivity;
 
-public class ActivityRead extends TimekeeperActivity {
+public class ActivityShow extends TimekeeperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity_read);
+        setContentView(R.layout.activity_basic_show);
 
         TextView titleView = (TextView)findViewById(R.id.activityTitle);
         titleView.setText("Greenwood\t61");

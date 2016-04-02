@@ -5,4 +5,8 @@
     <string name="title_activity_projects_list">Projects</string>
     <string name="title_activity_timesheets_list">Timesheets</string>
     <string name="title_activity_list">Activities</string>
+    <string name="title_activity_timesheet_show">Timesheet 4/8/16 - 4/13/16</string>
+    <string name="title_activity_project_show">ProjectShow</string>
+    <string name="title_activity_show_story_card">ShowStoryCard</string>
+    <string name="title_activity_edit_project">EditProject</string>
 </resources>
