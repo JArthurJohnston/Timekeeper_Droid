@@ -2,20 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jarthur.timekeeper_droid">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.list_activities.TimesheetList">
+        <activity android:name=".activities.UserLoginActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Show Activities-->
+        <!-- Show Activities -->
         <activity
             android:name=".activities.show_activities.ActivityShow"
             android:theme="@style/AppTheme" />
@@ -29,19 +35,19 @@
             android:name=".activities.show_activities.TimesheetShow"
             android:theme="@style/AppTheme" />
 
-        <!-- Edit Activities-->
+        <!-- Edit Activities -->
         <activity
             android:name=".activities.edit_activities.ProjectEdit"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.edit_activities.ActivityEdit"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.edit_activities.StoryCardEdit"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
 
-        <!-- List Activities-->
-        <!-- TimesheetList is the main acitvity-->
+        <!-- List Activities -->
+        <!-- TimesheetList is the main acitvity -->
         <activity
             android:name=".activities.list_activities.StoryCardList"
             android:label="@string/title_activity_story_card_list"
@@ -49,6 +55,10 @@
         <activity
             android:name=".activities.list_activities.ProjectsList"
             android:label="@string/title_activity_projects_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.list_activities.TimesheetList"
+            android:label="@string/title_activity_timesheets_list"
             android:theme="@style/AppTheme" />
     </application>
 
