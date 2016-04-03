@@ -4,20 +4,19 @@ import android.support.annotation.NonNull;
 
 import com.jarthur.timekeeper_droid.R;
 import com.jarthur.timekeeper_droid.activities.TimekeeperActivity;
-import com.jarthur.timekeeper_droid.activities.show_activities.ActivityShow;
+import com.jarthur.timekeeper_droid.activities.show_activities.ProjectShow;
+import com.jarthur.timekeeper_droid.activities.show_activities.StoryCardShow;
 
-/**
- * Created by arthur on 4/2/16.
- */
-public class ActivityEdit extends AbstractEditActivity {
+public class StoryCardEdit extends AbstractEditActivity {
+
     @Override
     protected int getContentLayout() {
-        return R.layout.content_edit_activity;
+        return R.layout.content_edit_story_card;
     }
 
     @NonNull
     @Override
     protected Class<? extends TimekeeperActivity> showActivityClass() {
-        return ActivityShow.class;
+        return StoryCardShow.class;
     }
 }

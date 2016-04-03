@@ -2,21 +2,12 @@ package com.jarthur.timekeeper_droid.activities.list_activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 
-import com.jarthur.timekeeper_droid.R;
-import com.jarthur.timekeeper_droid.activities.presenters.NavigateToButtonPresenter;
 import com.jarthur.timekeeper_droid.activities.show_activities.ProjectShow;
 
-public class ProjectsList extends ListActivity {
+public class ProjectsList extends AbstractListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

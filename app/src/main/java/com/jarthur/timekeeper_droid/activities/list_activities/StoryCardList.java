@@ -2,19 +2,16 @@ package com.jarthur.timekeeper_droid.activities.list_activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.Spinner;
 
 import com.jarthur.timekeeper_droid.R;
-import com.jarthur.timekeeper_droid.activities.TimekeeperActivity;
+import com.jarthur.timekeeper_droid.activities.show_activities.StoryCardShow;
 import com.jarthur.timekeeper_droid.activities.show_activities.TimesheetShow;
 
-public class StoryCardList extends ListActivity {
+public class StoryCardList extends AbstractListActivity {
 
 
 
@@ -35,7 +32,7 @@ public class StoryCardList extends ListActivity {
 
     @Override
     protected AdapterView.OnItemClickListener getListClickListener() {
-        final Intent showCardIntent = new Intent(this, TimesheetShow.class);
+        final Intent showCardIntent = new Intent(this, StoryCardShow.class);
         return new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

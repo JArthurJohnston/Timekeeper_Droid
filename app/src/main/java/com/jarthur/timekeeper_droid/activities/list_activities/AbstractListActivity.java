@@ -10,7 +10,7 @@ import android.widget.ListView;
 import com.jarthur.timekeeper_droid.R;
 import com.jarthur.timekeeper_droid.activities.TimekeeperActivity;
 
-public abstract class ListActivity extends TimekeeperActivity {
+public abstract class AbstractListActivity extends TimekeeperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,9 +17,9 @@ public abstract class ButtonPresenter {
         this(activity, R.id.fab);
     }
 
-    public ButtonPresenter(AppCompatActivity activity, int buttonId){
+    public ButtonPresenter(AppCompatActivity activity, int viewId){
         this.activity = activity;
-        this.buttonId = buttonId;
+        this.buttonId = viewId;
         setupButtonClickListener();
     }
 

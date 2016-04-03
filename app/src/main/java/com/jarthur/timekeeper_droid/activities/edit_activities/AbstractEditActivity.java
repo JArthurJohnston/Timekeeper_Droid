@@ -27,17 +27,16 @@ public abstract class AbstractEditActivity extends TimekeeperActivity {
     }
 
     private void insertContentLayout() {
+        RelativeLayout currentContent = getViewWithId(R.id.basicEditContent);
+        ViewGroup mainParent = (ViewGroup)currentContent.getParent();
+        mainParent.removeView(currentContent);
 
-        RelativeLayout contentParent = (RelativeLayout)findViewById(R.id.basicEditContent);
-        ViewGroup mainParent = (ViewGroup)contentParent.getParent();
-        mainParent.removeView(contentParent);
         LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View content =  inflater.inflate(getContentLayout(), contentParent);
+        View content =  inflater.inflate(getContentLayout(), currentContent);
         mainParent.addView(content);
     }
 
     private void wireUpSaveAndCancelButtons() {
-        new NavigateToButtonPresenter(this, showActivityClass(), R.id.cancelEditButton);
         new NavigateToButtonPresenter(this, showActivityClass(), R.id.saveEditButton);
     }
 

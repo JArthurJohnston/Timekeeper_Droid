@@ -15,9 +15,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Show Activities-->
         <activity
             android:name=".activities.show_activities.ActivityShow"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.show_activities.StoryCardShow"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.show_activities.ProjectShow"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.show_activities.TimesheetShow"
+            android:theme="@style/AppTheme" />
+
+        <!-- Edit Activities-->
+        <activity
+            android:name=".activities.edit_activities.ProjectEdit"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".activities.edit_activities.ActivityEdit"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".activities.edit_activities.StoryCardEdit"
+            android:theme="@style/AppTheme"></activity>
+
+        <!-- List Activities-->
+        <!-- TimesheetList is the main acitvity-->
         <activity
             android:name=".activities.list_activities.StoryCardList"
             android:label="@string/title_activity_story_card_list"
@@ -26,15 +50,6 @@
             android:name=".activities.list_activities.ProjectsList"
             android:label="@string/title_activity_projects_list"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".activities.show_activities.ProjectShow"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".activities.show_activities.StoryCardShow"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".activities.edit_activities.ProjectEdit"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

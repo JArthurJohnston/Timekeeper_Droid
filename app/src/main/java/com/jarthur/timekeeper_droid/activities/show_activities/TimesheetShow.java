@@ -2,16 +2,13 @@ package com.jarthur.timekeeper_droid.activities.show_activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import com.jarthur.timekeeper_droid.R;
-import com.jarthur.timekeeper_droid.activities.list_activities.ListActivity;
+import com.jarthur.timekeeper_droid.activities.list_activities.AbstractListActivity;
 
-public class TimesheetShow extends ListActivity {
+public class TimesheetShow extends AbstractListActivity {
 
     @NonNull
     protected AdapterView.OnItemClickListener getListClickListener() {

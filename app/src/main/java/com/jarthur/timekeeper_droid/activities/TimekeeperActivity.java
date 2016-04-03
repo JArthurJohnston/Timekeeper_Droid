@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.jarthur.timekeeper_droid.R;
 import com.jarthur.timekeeper_droid.activities.show_activities.TimesheetShow;
@@ -46,5 +47,9 @@ public class TimekeeperActivity extends AppCompatActivity {
         default:
             return TimesheetShow.class;
         }
+    }
+
+    public <T extends View> T getViewWithId(int id){
+        return (T)findViewById(id);
     }
 }
