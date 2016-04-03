@@ -17,7 +17,6 @@
         </activity>
         <activity
             android:name=".activities.show_activities.ActivityShow"
-            android:label="@string/title_activity_activity_read"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.list_activities.StoryCardList"
@@ -29,15 +28,12 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.show_activities.ProjectShow"
-            android:label="@string/title_activity_project_show"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".activities.show_activities.ShowStoryCard"
-            android:label="@string/title_activity_show_story_card"
+            android:name=".activities.show_activities.StoryCardShow"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.edit_activities.ProjectEdit"
-            android:label="@string/title_activity_edit_project"
             android:theme="@style/AppTheme"></activity>
     </application>
 

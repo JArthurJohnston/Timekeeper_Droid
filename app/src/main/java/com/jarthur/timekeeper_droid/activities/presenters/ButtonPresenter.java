@@ -1,6 +1,5 @@
 package com.jarthur.timekeeper_droid.activities.presenters;
 
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 

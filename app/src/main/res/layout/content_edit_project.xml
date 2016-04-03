@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".activities.edit_activities.ProjectEdit"
-    tools:showIn="@layout/activity_edit_project">
+    tools:showIn="@layout/activity_basic_edit">
 
     <EditText
         android:layout_width="wrap_content"
