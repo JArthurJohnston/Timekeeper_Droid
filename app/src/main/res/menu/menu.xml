@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/storyCardsMenuItem"
-        android:title="Story Cards">
-    </item>
+        android:title="Story Cards"></item>
     <item
         android:id="@+id/projectsMenuItem"
-        android:title="Projects">
-    </item>
+        android:title="Projects"></item>
     <item
         android:id="@+id/timesheetsMenuItem"
-        android:title="Timesheets">
-    </item>
+        android:title="Timesheets"></item>
+    <item
+        android:id="@+id/settingsMenuItem"
+        android:title="Settings"></item>
 </menu>

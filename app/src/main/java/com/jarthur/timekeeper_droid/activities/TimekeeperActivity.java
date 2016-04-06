@@ -12,6 +12,7 @@ import com.jarthur.timekeeper_droid.activities.show_activities.TimesheetShow;
 import com.jarthur.timekeeper_droid.activities.list_activities.ProjectsList;
 import com.jarthur.timekeeper_droid.activities.list_activities.StoryCardList;
 import com.jarthur.timekeeper_droid.activities.list_activities.TimesheetList;
+import com.jarthur.timekeeper_droid.application.Timekeeper;
 
 /**
  * Created by arthur on 3/30/16.
@@ -25,6 +26,10 @@ public class TimekeeperActivity extends AppCompatActivity {
         return true;
     }
 
+    public Timekeeper getTimekeeper(){
+        return (Timekeeper)getApplicationContext();
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         navigateToItem(item);
@@ -36,16 +41,18 @@ public class TimekeeperActivity extends AppCompatActivity {
         startActivity(navigationIntent);
     }
 
-    protected <T extends AppCompatActivity> Class activityForItem(int itemId){
+    protected <T extends TimekeeperActivity> Class activityForItem(int itemId){
         switch (itemId){
-        case(R.id.storyCardsMenuItem):
-            return StoryCardList.class;
+            case(R.id.storyCardsMenuItem):
+                return StoryCardList.class;
             case(R.id.projectsMenuItem):
                 return ProjectsList.class;
             case(R.id.timesheetsMenuItem):
                 return TimesheetList.class;
-        default:
-            return TimesheetShow.class;
+            case(R.id.settingsMenuItem):
+                return SettingsActivity.class;
+            default:
+                return TimesheetShow.class;
         }
     }
 

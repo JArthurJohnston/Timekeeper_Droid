@@ -1,4 +1,4 @@
-package com.jarthur.timekeeper_droid.core.models;
+package com.jarthur.timekeeper_droid.application.models;
 
 /**
  * Created by arthur on 3/28/16.

@@ -23,4 +23,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- API URLs-->
+    <string name="app_domain">https://paratus-timekeeper.herokuapp.com/</string>
+    <string name="user_login">https://paratus-timekeeper.herokuapp.com/user_login</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>
