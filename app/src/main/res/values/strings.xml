@@ -1,28 +1,21 @@
 <resources>
-    <string name="app_name">Timekeeper_Droid</string>
-    <string name="title_activity_activity_read">ActivityRead</string>
+    <string name="app_name">Timekeeper</string>
+    <string name="title_activity_activity_read">Activity</string>
     <string name="title_activity_story_card_list">Story Cards</string>
     <string name="title_activity_projects_list">Projects</string>
     <string name="title_activity_timesheets_list">Timesheets</string>
     <string name="title_activity_list">Activities</string>
     <string name="title_activity_timesheet_show">Timesheet 4/8/16 - 4/13/16</string>
     <string name="title_activity_project_show">ProjectShow</string>
-    <string name="title_activity_show_story_card">ShowStoryCard</string>
-    <string name="title_activity_edit_project">EditProject</string>
+    <string name="title_activity_show_story_card">Story Card</string>
+    <string name="title_activity_edit_project">Edit Project</string>
     <string name="title_activity_user_login">Sign in</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
 
     <!-- API URLs-->
     <string name="app_domain">https://paratus-timekeeper.herokuapp.com/</string>
